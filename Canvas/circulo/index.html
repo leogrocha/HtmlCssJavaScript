@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="UgCanvas" width="300" height="200" style="border:1px solid #c3c3c3;">
+    </canvas>
+    <script type="text/javascript">
+    var c=document.getElementById("UgCanvas");
+    var ctx=c.getContext("2d");
+    //ctx.fillStyle="#7F7F00"; // definindo a cor do elemento
+    ctx.beginPath(); // inicia um novo caminho
+    ctx.arc(100,75,50,0,Math.PI*2); // Realizando o cálculo da circunferência
+    ctx.closePath();// Finaliza o caminho
+    ctx.fill();
+    </script>
+</body>
+</html>
