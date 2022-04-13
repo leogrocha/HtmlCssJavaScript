@@ -9,8 +9,25 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
-    <script>              
-        // ...
+    <script>   
+        // Adicionando o destaque para os elementos com o id pimeiro           
+        document.getElementById("primeiro").classList.add("destaque");
+
+        // Informando os ids
+        const divs = document.getElementsByTagName("div");
+        // Removendo o destaque dos elementos que possuiam essa condição
+        Array.from(divs).forEach(e => e.classList.remove("destaque"));
+
+        // Trazendo todos os elementos das divs
+        const divsArray = [...divs];
+        // Adicionando o destaque nos elementos
+        divsArray.forEach(e => e.classList.add("destaque"));
+
+        // Buscando as classes com o nome ultimo
+        const ultimosElementos = document.getElementsByClassName('ultimo');
+        for(let e of ultimosElementos){
+            e.classList.remove("destaque");
+        }
     </script>
 </body>
 </html>
