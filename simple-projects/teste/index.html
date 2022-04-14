@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age" />
+
+    <button onclick="buttonResultado()" id="resultado">Resultado</button>
+
+    <div id="resposta"></div>
+
+    <script>
+        const age = document.getElementById('age');
+        const resposta = document.querySelector('#resposta');
+        const biggerAge = 18;
+
+        const buttonResultado = () => {
+            age.value > biggerAge ? resposta.innerHTML = 'Maior de idade' : resposta.innerHTML = 'Menor de idade';
+        }
+
+        console.log(age);
+    </script>
+</body>
+</html>
