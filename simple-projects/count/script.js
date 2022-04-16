@@ -10,9 +10,6 @@ const inc = () => {
     count.innerHTML = parseInt(count.innerHTML) + 1;
 }
 
-const teste = document.getElementById('teste');
-
-teste.style.color = 'red';
 
 
 
