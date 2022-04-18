@@ -35,7 +35,6 @@ function get_liquidez(liquidez_balanco){
     indices.info();
     indices_lst = ['liquidez_corrente', 'liquidez_imediata','liquidez_seca','liquidez_geral','terceiros','patrimonio_social','endividamento_geral','solvencia_geral'];
     for (let i=0; i<indices_lst.length; i++){
-      //document.querySelector("#"+indices_lst[i]+"_descricao").innerText = indices[indices_lst[i]].descricao;
       document.querySelector("#"+indices_lst[i]+"_indice").innerText = indices[indices_lst[i]].indice;
       document.querySelector("#"+indices_lst[i]+"_situacao").innerText = indices[indices_lst[i]].situacao;
     }  

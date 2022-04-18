@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+
+    </main>
+
+    <script>
+        const BASE_URL = 'http://localhost:4567/';
+
+        async function getContent() {
+            try {
+                const response = await fetch(BASE_URL);
+                //console.log(response);
+                const data = await response.json();
+                show(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        getContent();
+
+        function show(users) {
+
+            let output = '';
+
+            for(let user of users) {
+                output += `
+                    <div class="user">
+                        <li>${user.name}</li>
+                    </div>
+                `;
+            }
+
+            document.querySelector('main').innerHTML = output;
+        }
+
+    </script>
+</body>
+
+</html>
