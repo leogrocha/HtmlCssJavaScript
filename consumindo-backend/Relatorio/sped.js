@@ -1,8 +1,7 @@
 class Liquidez{
   constructor (liquidez_balanco){
       console.log(liquidez_balanco)
-      this.liquidez_indices = liquidez_balanco.liquidez_indices
-      this.liquidez_corrente = this.liquidez_indices.indice_liquidez_corrente;
+      //this.liquidez_corrente = this.liquidez_indices.indice_liquidez_corrente;
       this.liquidez_seca = this.liquidez_indices.indice_liquidez_seca;
       this.liquidez_imediata = this.liquidez_indices.indice_liquidez_imediata;
       this.liquidez_geral = this.liquidez_indices.indice_liquidez_geral;
@@ -33,7 +32,7 @@ function get_liquidez(liquidez_balanco){
     console.log('Here')
     const indices = new Liquidez(liquidez_balanco);
     indices.info();
-    indices_lst = ['liquidez_corrente', 'liquidez_imediata','liquidez_seca','liquidez_geral','terceiros','patrimonio_social','endividamento_geral','solvencia_geral'];
+    indices_lst = ['liquidez_imediata','liquidez_seca','liquidez_geral','terceiros','patrimonio_social','endividamento_geral','solvencia_geral'];
     for (let i=0; i<indices_lst.length; i++){
       document.querySelector("#"+indices_lst[i]+"_indice").innerText = indices[indices_lst[i]].indice;
       document.querySelector("#"+indices_lst[i]+"_situacao").innerText = indices[indices_lst[i]].situacao;
@@ -98,12 +97,12 @@ function relatorio(result){
 }
 
 var raw = {
-  "balanco": "https://server.ectarepay.com.br/ectareArquivos/pdfviewer2619204387105330867.pdf",
-  "balanco_antigo": "https://server.ectarepay.com.br/ectareArquivos/pdfviewer2619204387105330867.pdf",
-  "dre": "https://server.ectarepay.com.br/ectareArquivos/DRE.pdf",
-  "dre_antigo": "https://server.ectarepay.com.br/ectareArquivos/DRE.pdf",
-  "boavista_pf": "https://server.ectarepay.com.br/ectareArquivos/maria.json",
-  "boavista_pj": "https://server.ectarepay.com.br/ectareArquivos/bomdia.json"};
+  "balanco": ["https://server.ectarepay.com.br/ectareArquivos/pdfviewer2619204387105330867.pdf","https://server.ectarepay.com.br/ectareArquivos/pdfviewer2619204387105330867.pdf"],
+  "balanco_anterior": ["https://server.ectarepay.com.br/ectareArquivos/pdfviewer2619204387105330867.pdf"],
+  "dre": ["https://server.ectarepay.com.br/ectareArquivos/DRE.pdf"],
+  "dre_anterior": ["https://server.ectarepay.com.br/ectareArquivos/DRE.pdf"],
+  "boavista": ["https://server.ectarepay.com.br/ectareArquivos/bomdia.json","https://server.ectarepay.com.br/ectareArquivos/RenataOliveira.json"]
+};
 
 console.log(raw)
 var requestOptions = {
