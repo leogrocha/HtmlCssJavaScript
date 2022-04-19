@@ -1,4 +1,4 @@
-let age = document.querySelector(".age");
-
-age.innerHtml = "<p>Teste</p>";
+const age = document.getElementsByClassName('.age');
 console.log(age);
+
+//age.textContent = parseInt(24);

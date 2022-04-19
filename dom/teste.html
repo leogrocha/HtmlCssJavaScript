@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='liquidez_corrente_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_corrente_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_corrente_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_situacao'>
+        <p></p>
+    </div>
+    <div class='terceiros_title'>
+        <p></p>
+    </div>
+    <div class='terceiros_indice'>
+        <p></p>
+    </div>
+    <div class='terceiros_situacao'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_title'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_indice'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_situacao'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_title'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_indice'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_situacao'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_title'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_indice'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_situacao'>
+        <p></p>
+    </div>
+
+    <p>_______________________________________________________________</p>
+
+    <div class='liquidez_corrente_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_corrente_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_corrente_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_imediata_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_seca_situacao'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_title'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_indice'>
+        <p></p>
+    </div>
+    <div class='liquidez_geral_situacao'>
+        <p></p>
+    </div>
+    <div class='terceiros_title'>
+        <p></p>
+    </div>
+    <div class='terceiros_indice'>
+        <p></p>
+    </div>
+    <div class='terceiros_situacao'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_title'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_indice'>
+        <p></p>
+    </div>
+    <div class='patrimonio_social_situacao'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_title'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_indice'>
+        <p></p>
+    </div>
+    <div class='endividamento_geral_situacao'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_title'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_indice'>
+        <p></p>
+    </div>
+    <div class='solvencia_geral_situacao'>
+        <p></p>
+    </div>
+
+    <script>
+        const liquidez_balanco = [
+            {
+                "liquidez_indices": {
+                    "imobilizacao_patrimonio_social": {
+                        "indice": 0.04574443398294763,
+                        "situacao": "otimo"
+                    },
+                    "indice_endividamento_geral": {
+                        "indice": 1.094893817130752,
+                        "situacao": "atencao"
+                    },
+                    "indice_liquidez_corrente": {
+                        "indice": 1.106871705058769,
+                        "situacao": "atencao"
+                    },
+                    "indice_liquidez_geral": {
+                        "indice": 0.908564983149337,
+                        "situacao": "ruim"
+                    },
+                    "indice_liquidez_imediata": {
+                        "indice": 0.38031691531656775,
+                        "situacao": "pessimo"
+                    },
+                    "indice_liquidez_seca": {
+                        "indice": 1.106871705058769,
+                        "situacao": "atencao"
+                    },
+                    "indice_solvencia_geral": {
+                        "indice": 0.9133305753982354,
+                        "situacao": "atencao"
+                    },
+                    "participacao_capital_terceiros": {
+                        "indice": 11.538094369437413,
+                        "situacao": "otimo"
+                    }
+                }
+            },]
+
+        class Liquidez {
+            constructor(liquidez_balanco) {
+                console.log(liquidez_balanco)
+                this.liquidez_indices = liquidez_balanco[0].liquidez_indices
+                this.liquidez_corrente = this.liquidez_indices.indice_liquidez_corrente;
+                this.liquidez_seca = this.liquidez_indices.indice_liquidez_seca;
+                this.liquidez_imediata = this.liquidez_indices.indice_liquidez_imediata;
+                this.liquidez_geral = this.liquidez_indices.indice_liquidez_geral;
+                this.terceiros = this.liquidez_indices.participacao_capital_terceiros;
+                this.patrimonio_social = this.liquidez_indices.imobilizacao_patrimonio_social;
+                this.endividamento_geral = this.liquidez_indices.indice_endividamento_geral;
+                this.solvencia_geral = this.liquidez_indices.indice_solvencia_geral;
+            }
+        };
+
+        const indices = new Liquidez(liquidez_balanco);
+
+        let indices_lst = ['liquidez_corrente', 'liquidez_geral', 'endividamento_geral', 'patrimonio_social', 'liquidez_imediata',
+            'liquidez_seca', 'terceiros', 'solvencia_geral'];
+
+        for (let i = 0; i < indices_lst.length; i++) {
+
+            document.getElementsByClassName(indices_lst[i] + "_indice")[0].innerText = indices[indices_lst[i]].indice;
+            document.getElementsByClassName(indices_lst[i] + "_situacao")[0].innerText = indices[indices_lst[i]].situacao;
+        }  
+
+        for (let j = 0; j < indices_lst.length; j++) {
+            document.getElementsByClassName(indices_lst[j] + "_indice")[1].innerText = indices[indices_lst[j]].indice;
+            document.getElementsByClassName(indices_lst[j] + "_situacao")[1].innerText = indices[indices_lst[j]].situacao;
+        }
+
+    </script>
+</body>
+
+</html>

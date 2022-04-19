@@ -1,7 +1,8 @@
 class Liquidez{
   constructor (liquidez_balanco){
       console.log(liquidez_balanco)
-      //this.liquidez_corrente = this.liquidez_indices.indice_liquidez_corrente;
+      this.liquidez_indices = liquidez_balanco[0].liquidez_indices
+      this.liquidez_corrente = this.liquidez_indices.indice_liquidez_corrente;
       this.liquidez_seca = this.liquidez_indices.indice_liquidez_seca;
       this.liquidez_imediata = this.liquidez_indices.indice_liquidez_imediata;
       this.liquidez_geral = this.liquidez_indices.indice_liquidez_geral;
@@ -32,10 +33,11 @@ function get_liquidez(liquidez_balanco){
     console.log('Here')
     const indices = new Liquidez(liquidez_balanco);
     indices.info();
-    indices_lst = ['liquidez_imediata','liquidez_seca','liquidez_geral','terceiros','patrimonio_social','endividamento_geral','solvencia_geral'];
+    let indices_lst = ['liquidez_corrente', 'liquidez_geral', 'endividamento_geral', 'patrimonio_social', 'liquidez_imediata',
+    'liquidez_seca', 'terceiros', 'solvencia_geral'];
     for (let i=0; i<indices_lst.length; i++){
-      document.querySelector("#"+indices_lst[i]+"_indice").innerText = indices[indices_lst[i]].indice;
-      document.querySelector("#"+indices_lst[i]+"_situacao").innerText = indices[indices_lst[i]].situacao;
+      document.getElementsByClassName("."+indices_lst[i]+"_indice")[0].innerText = indices[indices_lst[i]].indice;
+      document.getElementsByClassName("."+indices_lst[i]+"_situacao")[0].innerText = indices[indices_lst[i]].situacao;
     }  
   //}
 }
