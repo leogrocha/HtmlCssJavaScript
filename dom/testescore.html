@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Score</title>
+</head>
+
+<body>
+
+    <h3>Teste Score</h3>
+    <p id="score_value"></p>
+    <p id="score_description"></p>
+
+    <script>
+        const boavista = [
+            {
+                "consultas": {
+                    "periodo": [
+                        {
+                            "Quantidade": 1.0,
+                            "mes": "11-2021"
+                        },
+                        {
+                            "Quantidade": 7.0,
+                            "mes": "10-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "9-2021"
+                        },
+                        {
+                            "Quantidade": 1.0,
+                            "mes": "8-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "7-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "6-2021"
+                        },
+                        {
+                            "Quantidade": 2.0,
+                            "mes": "5-2021"
+                        },
+                        {
+                            "Quantidade": 1.0,
+                            "mes": "4-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "3-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "2-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "1-2021"
+                        },
+                        {
+                            "Quantidade": 0.0,
+                            "mes": "12-2020"
+                        },
+                        {
+                            "Quantidade": 4.0,
+                            "mes": "11-2020"
+                        }
+                    ],
+                    "quantidade": 16
+                },
+                "descricao": {
+                    "cheques_devolvidos_informados_usuario": {
+                        "situacao": "bom",
+                        "total": "Nada consta"
+                    },
+                    "cheques_sem_fundo": {
+                        "situacao": "bom",
+                        "total": "Nada consta"
+                    },
+                    "cheques_sustados": {
+                        "situacao": "bom",
+                        "total": "Nada consta"
+                    },
+                    "pendencias_restricoes": {
+                        "situacao": "bom",
+                        "total": "Nada consta"
+                    },
+                    "protestos": {
+                        "situacao": "bom",
+                        "total": "Nada consta"
+                    }
+                },
+                "score": {
+                    "probabilidade": 6.5,
+                    "score": 919,
+                    "texto": "De cada 100 empresas classificadas nesta classe de score, é provável que 6 apresentem débitos no mercado nos próximos 12 meses."
+                },
+                "tipo": "defineRisco"
+            },
+        ];
+
+        class BoaVistaPJ {
+            constructor(boavista) {
+                this.score = boavista[0].score;
+            }
+        }
+
+        const score_value = document.getElementById('score_value');
+        const score_description = document.getElementById('score_description');
+        const boavistaPJ = new BoaVistaPJ(boavista);
+
+        score_value.innerHTML = boavistaPJ.score.score;
+        score_description.innerHTML = boavistaPJ.score.texto;
+    </script>
+</body>
+
+</html>

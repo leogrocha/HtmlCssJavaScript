@@ -58,4 +58,4 @@ const liquidez = new Liquidez(liquidez_balanco);
 // });
 // console.log(result);
 
-console.log(liquidez.liquidez_indices);
+//console.log(liquidez.liquidez_indices.indice_liquidez_corrente.situacao);
