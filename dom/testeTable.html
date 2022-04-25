@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table tr th {
+            font-weight: bold;
+            border: 1px solid black;
+            background-color: #333;
+            color: white;
+        }
+
+        table th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        table tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tabela">
+
+    </div>
+
+    <script>
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        document.getElementById('tabela').appendChild(table);
+
+        const indices_tables = ['ativo', 'ativo_circulante', 'ativo_nao_circulante', 'disponibilidades', 'estoques', 'imobilizado',
+            'obrigacoes_a_longo_prazo', 'passivo_circulante', 'passivo_nao_circulante', 'patrimonio_liquido', 'realizavel_a_longo_prazo'];
+
+        let row = document.createElement('tr');
+        thead.appendChild(row);
+
+        // for (let i = 0; i < indices_tables.length; i++) {
+
+        //     let columnHead = document.createElement('th');
+        //     columnHead.innerHTML = indices_tables[i];
+
+        //     row.appendChild(columnHead);
+        // }
+
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
