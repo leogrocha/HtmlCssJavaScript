@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <title>Document</title>
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid red;
+        }
+
+        
+        #table_1 #table_2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #table_1 {
+            margin-bottom: 50px;
+        }
+
+        h3 {
+            font-size: 28px;
+        }
+            
+        table {
+            width: 50vh;
+        }
+
+        table tr th {
+            font-weight: bold;
+            border: 1px solid black;
+            background-color: #333;
+            color: white;
+        }
+
+        table th,
+        td {
+            padding: 10px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        table tr,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <h3>Pessoa Física</h3>
+        <div id="table_1"></div>
+        <h3>Pessoa Jurídica</h3>
+        <div id="table_2"></div>
+    </div>
+        
+    
+
+    <script src="./twoTable.js"></script>
+</body>
+</html>
