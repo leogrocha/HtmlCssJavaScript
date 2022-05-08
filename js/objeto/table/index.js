@@ -82,10 +82,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const balanco_anterior_1 = document.createElement('td');
             const balanco_anterior_2 = document.createElement('td');
             const balanco_anterior_3 = document.createElement('td');
-            balanco_anterior_0.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[0]][0].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            balanco_anterior_1.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[0]][1].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            balanco_anterior_2.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[0]][2].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            balanco_anterior_3.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[0]][3].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            balanco_anterior_0.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][0].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            balanco_anterior_1.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][1].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            balanco_anterior_2.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][2].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            balanco_anterior_3.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][3].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
             row_1.appendChild(balanco_anterior_0);
             row_1.appendChild(balanco_anterior_1);
@@ -107,6 +107,9 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             row_1.appendChild(balanco_atual_3);
         }
         tbody.appendChild(row_1);
+
+        console.log(indices_balanco_anterior.liquidez_variaveis['ativo'][0]);
+
     }
 
     for(let linha = 0; linha < indices_dre_table.length; linha++){
@@ -139,10 +142,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const dre_atual_1 = document.createElement('td');
             const dre_atual_2 = document.createElement('td');
             const dre_atual_3 = document.createElement('td');
-            dre_atual_0.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[1]][0].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            dre_atual_1.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[1]][1].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            dre_atual_2.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[1]][2].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-            dre_atual_3.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[1]][3].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            dre_atual_0.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][0].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            dre_atual_1.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][1].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            dre_atual_2.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][2].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+            dre_atual_3.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][3].toFixed(2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
             row_2.appendChild(dre_atual_0);
             row_2.appendChild(dre_atual_1);
