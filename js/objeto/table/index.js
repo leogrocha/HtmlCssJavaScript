@@ -8,6 +8,12 @@ import json_balanco_anterior from './balanco_anterior.js'
 import json_liquidez_balanco from './liquidez_balanco.js'
 
 
+
+function formatLocale(value) {
+    return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+}
+
+
 function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liquidez_balanco) {
     const indices_balanco_anterior = new liquidez_balanco(json_balanco_anterior);
     const indices_dre_anterior = new dre_anterior(json_dre_anterior);
@@ -82,10 +88,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const balanco_anterior_1 = document.createElement('td');
             const balanco_anterior_2 = document.createElement('td');
             const balanco_anterior_3 = document.createElement('td');
-            balanco_anterior_0.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][0].T01;
-            balanco_anterior_1.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][1].T02;
-            balanco_anterior_2.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][2].T03;
-            balanco_anterior_3.innerHTML = indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][3].T04;
+            balanco_anterior_0.innerHTML = formatLocale(indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][0].T01);
+            balanco_anterior_1.innerHTML = formatLocale(indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][1].T02);
+            balanco_anterior_2.innerHTML = formatLocale(indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][2].T03);
+            balanco_anterior_3.innerHTML = formatLocale(indices_balanco_anterior.liquidez_variaveis[indices_table[linha]][3].T04);
 
             row_1.appendChild(balanco_anterior_0);
             row_1.appendChild(balanco_anterior_1);
@@ -96,10 +102,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const balanco_atual_1 = document.createElement('td');
             const balanco_atual_2 = document.createElement('td');
             const balanco_atual_3 = document.createElement('td');
-            balanco_atual_0.innerHTML = indices_balanco_atual.liquidez_variaveis[indices_table[linha]][0].T01;
-            balanco_atual_1.innerHTML = indices_balanco_atual.liquidez_variaveis[indices_table[linha]][1].T02;
-            balanco_atual_2.innerHTML = indices_balanco_atual.liquidez_variaveis[indices_table[linha]][2].T03;
-            balanco_atual_3.innerHTML = indices_balanco_atual.liquidez_variaveis[indices_table[linha]][3].T04;
+            balanco_atual_0.innerHTML = formatLocale(indices_balanco_atual.liquidez_variaveis[indices_table[linha]][0].T01);
+            balanco_atual_1.innerHTML = formatLocale(indices_balanco_atual.liquidez_variaveis[indices_table[linha]][1].T02);
+            balanco_atual_2.innerHTML = formatLocale(indices_balanco_atual.liquidez_variaveis[indices_table[linha]][2].T03);
+            balanco_atual_3.innerHTML = formatLocale(indices_balanco_atual.liquidez_variaveis[indices_table[linha]][3].T04);
 
             row_1.appendChild(balanco_atual_0);
             row_1.appendChild(balanco_atual_1);
@@ -129,10 +135,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const dre_anterior_1 = document.createElement('td');
             const dre_anterior_2 = document.createElement('td');
             const dre_anterior_3 = document.createElement('td');
-            dre_anterior_0.innerHTML = indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][0].T01;
-            dre_anterior_1.innerHTML = indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][1].T02;
-            dre_anterior_2.innerHTML = indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][2].T03;
-            dre_anterior_3.innerHTML = indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][3].T04;
+            dre_anterior_0.innerHTML = formatLocale(indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][0].T01);
+            dre_anterior_1.innerHTML = formatLocale(indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][1].T02);
+            dre_anterior_2.innerHTML = formatLocale(indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][2].T03);
+            dre_anterior_3.innerHTML = formatLocale(indices_dre_anterior.liquidez_variaveis[indices_dre_table[linha]][3].T04);
 
             
 
@@ -145,10 +151,10 @@ function get_table(json_balanco_anterior, json_dre_anterior, json_dre, json_liqu
             const dre_atual_1 = document.createElement('td');
             const dre_atual_2 = document.createElement('td');
             const dre_atual_3 = document.createElement('td');
-            dre_atual_0.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][0].T01;
-            dre_atual_1.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][1].T02;
-            dre_atual_2.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][2].T03;
-            dre_atual_3.innerHTML = indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][3].T04;
+            dre_atual_0.innerHTML = formatLocale(indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][0].T01);
+            dre_atual_1.innerHTML = formatLocale(indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][1].T02);
+            dre_atual_2.innerHTML = formatLocale(indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][2].T03);
+            dre_atual_3.innerHTML = formatLocale(indices_dre_atual.liquidez_variaveis[indices_dre_table[linha]][3].T04);
 
             row_2.appendChild(dre_atual_0);
             row_2.appendChild(dre_atual_1);
