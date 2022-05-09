@@ -8,12 +8,7 @@ const dre_anterior = [
                 {
                     "T02": 52246.16
                 },
-                {
-                    "T03": 170600.96
-                },
-                {
-                    "T04": 196801.16
-                }
+                
             ],
             "resultado_liquido_do_periodo_antes_do_irpj_e_da_csll_atividade_geral": [
                 {
