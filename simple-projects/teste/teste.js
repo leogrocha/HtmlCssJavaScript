@@ -1,0 +1,1 @@
+console.log(typeof(erro) == 'undefined' ? 'deu bom' : 'deu ruim');
