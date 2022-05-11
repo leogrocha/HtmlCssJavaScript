@@ -25,12 +25,23 @@
             justify-content: center;
             align-items: center;
             flex-direction: row;
-            width: 100px;
-            height: 100px;
-            border: 1px solid black;
+            
+            
         }
 
-        
+        #bens_direitos_atual {
+            margin-left: 20px;
+        }
+
+        #bens_direitos_atual, #bens_direitos_anterior {
+            border: 1px solid black;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     
 </head>
@@ -38,8 +49,13 @@
 <body>
 
     <div class="container">
-        <div id="bens_direitos_anterior"></div>
-        <div id="bens_direitos_atual"></div>
+        
+        <div id="bens_direitos_anterior">
+            <p id="bens_direitos_anterior_value"></p>
+        </div>
+        <div id="bens_direitos_atual">
+            <p id="bens_direitos_atual_value"></p>
+        </div>
     </div>
 
 

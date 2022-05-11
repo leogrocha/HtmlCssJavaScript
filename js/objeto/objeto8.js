@@ -2,46 +2,88 @@ const irpf = [
     {
         "agronegocio": {
             "apuracao": {
-                "despesas_custeio_investimento": 13765677.19,
-                "receita_bruta": 15155828.86,
-                "resultado": 1390151.67,
+                "despesas_custeio_investimento": 149450.0,
+                "receita_bruta": 167060.0,
+                "resultado": 17610.0,
                 "situacao": "bom"
             }
         },
         "bens_dividas": {
             "bens_direitos": {
-                "Bens e direitos em 31/12/2019": 113447.58,
-                "Bens e direitos em 31/12/2020": 150112.17,
+                "bens_e_direitos_anterior": 95000.0,
+                "bens_e_direitos_corrente": 152380.87,
                 "situacao": "bom"
             },
             "dividas_onus": {
-                "Dívidas e ônus reais em 31/12/2019": 0.0,
-                "Dívidas e ônus reais em 31/12/2020": 0.0,
+                "dividas_e_onus_reais_anterior": 0.0,
+                "dividas_e_onus_reais_corrente": 0.0,
                 "situacao": "bom"
             }
         },
         "dados_endereco": {
-            "bairro": "GREENVILLE",
-            "celular": "(66) 99668-2707",
-            "cep": "78840-000",
-            "complemento": "QUADRA 11 - LOTE 04",
+            "bairro": "CENTRO",
+            "celular": "nan",
+            "cep": "49820-000",
+            "complemento": "APT 2",
             "email": "nan",
-            "endereco": "RUA SAO PEDRO DA CIPA",
+            "endereco": "AVENIDA ANANIAS FERNANDES SANTOS",
             "fone": "nan",
-            "municipio": "CAMPO VERDE",
-            "numero": "398",
-            "uf": "MT"
+            "municipio": "CANINDÉ DE SÃO FRANCISCO",
+            "numero": "159",
+            "uf": "SE"
         },
         "dados_pessoais": {
-            "cpf": "052.263.781-73",
-            "nome": "JOAO PAULO FERREIRA CICILIATO"
+            "cpf": "609.962.005-25",
+            "nome": "MAGNO JOSE DE MELO"
         },
         "exercicio": "EXERCÍCIO 2021 - ANO-CALENDÁRIO 2020",
+        "movimentacao_rebanho": {
+            "asininos": {
+                "aquisicoes": 0.0,
+                "consumo_perdas": 0.0,
+                "estoque_final": 0.0,
+                "estoque_inicial": 0.0,
+                "nascimentos": 0.0,
+                "vendas": 0.0
+            },
+            "bovinos": {
+                "aquisicoes": 65.0,
+                "consumo_perdas": 2.0,
+                "estoque_final": 93.0,
+                "estoque_inicial": 20.0,
+                "nascimentos": 10.0,
+                "vendas": 0.0
+            },
+            "caprinos": {
+                "aquisicoes": 0.0,
+                "consumo_perdas": 0.0,
+                "estoque_final": 0.0,
+                "estoque_inicial": 0.0,
+                "nascimentos": 0.0,
+                "vendas": 0.0
+            },
+            "outros": {
+                "aquisicoes": 0.0,
+                "consumo_perdas": 0.0,
+                "estoque_final": 0.0,
+                "estoque_inicial": 0.0,
+                "nascimentos": 0.0,
+                "vendas": 0.0
+            },
+            "suinos": {
+                "aquisicoes": 0.0,
+                "consumo_perdas": 0.0,
+                "estoque_final": 0.0,
+                "estoque_inicial": 0.0,
+                "nascimentos": 0.0,
+                "vendas": 0.0
+            }
+        },
         "rendimentos_nao_tributaveis": {
-            "total": 537.41
+            "total": 0.0
         },
         "rendimentos_tributaveis": {
-            "total": 1390396.78
+            "total": 60678.0
         },
         "tipo": "simplificado"
     }
@@ -67,9 +109,4 @@ class Irpf {
 }
 
 const class_irpf = new Irpf(irpf);
-console.log(class_irpf);
-console.log(class_irpf.apuracao);
-
-console.log(class_irpf.bens_dividas);
-
-console.log(class_irpf.exercicio);
+console.log(class_irpf.dividas_onus.dividas_e_onus_reais_anterior);
