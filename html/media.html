@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 80vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        @media (max-width: 600px)
+        {
+          .container
+           {
+            background-color: red;
+           }
+        }
+        @media (min-width: 1920px)
+        {
+          .container
+           {
+            background-color: green;
+           }
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+    
+        </div>
+    </div>
+    
+</body>
+</html>
