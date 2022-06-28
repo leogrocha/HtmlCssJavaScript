@@ -1,0 +1,17 @@
+input[type="file"] {
+  display: none;
+}
+
+label {
+    padding: 20px 10px;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('./pdf.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}

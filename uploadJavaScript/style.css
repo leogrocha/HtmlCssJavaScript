@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_file {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.possui_documento {
+    background-image: url('./pdf.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
