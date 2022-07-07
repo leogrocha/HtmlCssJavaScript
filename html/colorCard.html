@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 600px;
+            height: 600px;
+            background-color: yellow;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .box-container {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            border: 1px solid rgb(80,80,80);
+            background-image: url('./img/pdf.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .container:hover .box-container {
+            filter: blur(3px);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="box-container">
+
+        </div>
+    </div>
+</body>
+
+</html>

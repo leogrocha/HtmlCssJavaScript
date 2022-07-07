@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="botoes">
+           <button onclick="trocaAbaCadastro('opcao-dados-gerais')" class="opcaoCadastro" id="opcao-dados-gerais">Dados Gerais</button>
+           <button onclick="trocaAbaCadastro('opcao-dados-endereco')" class="opcaoCadastro" id="opcao-dados-endereco">Endereço</button>
+           <button onclick="trocaAbaCadastro('opcao-dados-bancarios')" class="opcaoCadastro" id="opcao-dados-bancarios">Dados Bancários</button>
+        </div>
+
+        <div class="dadosGerais">
+            <h3>Dados Gerais</h3>
+            <input id="cpf" type="text" name="cpf" placeholder="cpf">
+
+            <input id="nome" type="text" name="nome" placeholder="nome">
+
+            <input id="rg" type="text" name="rg" placeholder="rg">
+
+            <input id="idade" type="text" name="idade" placeholder="idade">
+        </div>
+
+        <div class="quadroEndereco">
+            <h3>Endereço</h3>
+            <input id="rua" type="text" name="rua" placeholder="rua">
+
+            <input id="bairro" type="text" name="bairro" placeholder="bairro">
+
+            <input id="numero" type="text" name="numero" placeholder="numero">
+        </div>
+
+        <div class="quadroDadosBancarios">
+            <h3>Dados Bancários</h3>
+            <input id="banco" type="text" name="banco" placeholder="banco">
+           
+            <input id="conta" type="text" name="conta" placeholder="conta">
+
+            <input id="digito" type="text" name="digito" placeholder="digito">
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

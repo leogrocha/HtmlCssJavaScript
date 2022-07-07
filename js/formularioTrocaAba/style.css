@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadosGerais, .quadroEndereco, .quadroDadosBancarios {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: lightgreen;
+}
+
+input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
