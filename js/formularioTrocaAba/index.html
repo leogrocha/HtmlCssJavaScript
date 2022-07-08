@@ -10,40 +10,93 @@
 <body>
     <div class="container">
 
-        <div class="botoes">
-           <button onclick="trocaAbaCadastro('opcao-dados-gerais')" class="opcaoCadastro" id="opcao-dados-gerais">Dados Gerais</button>
-           <button onclick="trocaAbaCadastro('opcao-dados-endereco')" class="opcaoCadastro" id="opcao-dados-endereco">Endereço</button>
-           <button onclick="trocaAbaCadastro('opcao-dados-bancarios')" class="opcaoCadastro" id="opcao-dados-bancarios">Dados Bancários</button>
+        <div class="tipopessoapf">
+            <div class="botoes">
+               <button onclick="trocaAbaCadastro('opcao-dados-gerais_pf')" class="opcaoCadastro_pf active" id="opcao-dados-gerais_pf">Dados Gerais</button>
+               <button onclick="trocaAbaCadastro('opcao-dados-endereco_pf')" class="opcaoCadastro_pf" id="opcao-dados-endereco_pf">Endereço</button>
+               <button onclick="trocaAbaCadastro('opcao-dados-bancarios_pf')" class="opcaoCadastro_pf" id="opcao-dados-bancarios_pf">Dados Bancários</button>
+            </div>
+    
+            <div class="dadosGerais_pf">
+                <h3>Dados Gerais</h3>
+                <input id="cpf_pf" type="text" name="cpf_pf" placeholder="cpf">
+    
+                <input id="nome_pf" type="text" name="nome_pf" placeholder="nome">
+    
+                <input id="rg_pf" type="text" name="rg_pf" placeholder="rg">
+    
+                <input id="idade_pf" type="text" name="idade_pf" placeholder="idade">
+            </div>
+    
+            <div class="quadroEndereco_pf" style="display: none;">
+                <h3>Endereço</h3>
+                <input id="rua_pf" type="text" name="rua_pf" placeholder="rua">
+    
+                <input id="bairro_pf" type="text" name="bairro_pf" placeholder="bairro">
+    
+                <input id="numero_pf" type="text" name="numero_pf" placeholder="numero">
+            </div>
+    
+            <div class="quadroDadosBancarios_pf" style="display: none;">
+                <h3>Dados Bancários</h3>
+                <input id="banco_pf" type="text" name="banco_pf" placeholder="banco">
+               
+                <input id="conta_pf" type="text" name="conta_pf" placeholder="conta">
+    
+                <input id="digito_pf" type="text" name="digito_pf" placeholder="digito">
+            </div>
         </div>
 
-        <div class="dadosGerais">
-            <h3>Dados Gerais</h3>
-            <input id="cpf" type="text" name="cpf" placeholder="cpf">
+        <div class="tipopessoapj">
+            <div class="botoes">
+               <button onclick="trocaAbaCadastro('opcao-dados-gerais_pj')" class="opcaoCadastro_pj active" id="opcao-dados-gerais_pj">Dados Gerais</button>
+               <button onclick="trocaAbaCadastro('opcao-dados-endereco_pj')" class="opcaoCadastro_pj" id="opcao-dados-endereco_pj">Endereço</button>
+               <button onclick="trocaAbaCadastro('opcao-dados-bancarios_pj')" class="opcaoCadastro_pj" id="opcao-dados-bancarios_pj">Dados Bancários</button>
+               <button onclick="trocaAbaCadastro('opcao-dados-representante_rep')" class="opcaoCadastro_pj" id="opcao-dados-representante_rep">Dados Representante</button>
+            </div>
+    
+            <div class="dadosGerais_pj">
+                <h3>Dados Gerais</h3>
+                <input id="cnpj_pj" type="text" name="cnpj_pj" placeholder="cnpj">
+    
+                <input id="nome_pj" type="text" name="nome_pj" placeholder="nome empresa">
+    
+                <input id="data_abertura_pj" type="text" name="data_abertura_pj" placeholder="data abertura">
+    
+                <input id="is_pj" type="text" name="is_pj" placeholder="is">
+            </div>
+    
+            <div class="quadroEndereco_pj" style="display: none;">
+                <h3>Endereço</h3>
+                <input id="rua_pj" type="text" name="rua_pj" placeholder="rua">
+    
+                <input id="bairro_pj" type="text" name="bairro_pj" placeholder="bairro">
+    
+                <input id="numero_pj" type="text" name="numero_pj" placeholder="numero">
+            </div>
+    
+            <div class="quadroDadosBancarios_pj" style="display: none;">
+                <h3>Dados Bancários</h3>
+                <input id="banco_pj" type="text" name="banco_pj" placeholder="banco">
+               
+                <input id="conta_pj" type="text" name="conta_pj" placeholder="conta">
+    
+                <input id="digito_pj" type="text" name="digito_pj" placeholder="digito">
+            </div>
 
-            <input id="nome" type="text" name="nome" placeholder="nome">
+            <div class="dadosRepresentante_rep" style="display: none">
+                <h3>Dados Representantes</h3>
+                <input id="nome_rep" type="text" name="nome_rep" placeholder="nome representante">
+               
+                <input id="cpf_rep" type="text" name="cpf_rep" placeholder="cpf representante">
+    
+                <input id="data_nascimento_rep" type="text" name="data_nascimento_rep" placeholder="data nascimento representante">
 
-            <input id="rg" type="text" name="rg" placeholder="rg">
 
-            <input id="idade" type="text" name="idade" placeholder="idade">
+            </div>
         </div>
 
-        <div class="quadroEndereco">
-            <h3>Endereço</h3>
-            <input id="rua" type="text" name="rua" placeholder="rua">
 
-            <input id="bairro" type="text" name="bairro" placeholder="bairro">
-
-            <input id="numero" type="text" name="numero" placeholder="numero">
-        </div>
-
-        <div class="quadroDadosBancarios">
-            <h3>Dados Bancários</h3>
-            <input id="banco" type="text" name="banco" placeholder="banco">
-           
-            <input id="conta" type="text" name="conta" placeholder="conta">
-
-            <input id="digito" type="text" name="digito" placeholder="digito">
-        </div>
     </div>
 
 

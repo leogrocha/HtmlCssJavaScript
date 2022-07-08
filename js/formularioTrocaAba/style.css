@@ -13,7 +13,25 @@
     align-items: center;
 }
 
-.dadosGerais, .quadroEndereco, .quadroDadosBancarios {
+.tipopessoapf {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tipopessoapj {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dadosGerais_pf, .quadroEndereco_pf, .quadroDadosBancarios_pf {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
