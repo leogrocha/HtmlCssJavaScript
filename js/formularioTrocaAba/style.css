@@ -57,3 +57,13 @@ button {
     border-radius: 10px;
 }
 
+.botaoSalvar {
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+.botaoSalvar button {
+    background-color: lightgreen;
+}
+
