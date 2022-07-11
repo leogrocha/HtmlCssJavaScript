@@ -1,8 +1,8 @@
 let tipopessoa = "";
 
 function verificandoTipoPessoa() {
-    //const documento = '270.646.920-07';
-    const documento = "26.246.306/0001-16";
+    const documento = '270.646.920-07';
+    //const documento = "26.246.306/0001-16";
 
     if (documento.length === 14){
         tipopessoa = "PF";
